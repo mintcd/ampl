@@ -1,0 +1,5 @@
+model rosenbr_param.mod;
+data rosenbr_param.dat;
+option solver snopt;
+solve;
+display Rosen, x, y;

@@ -1,0 +1,6 @@
+option solver knitro;
+model generalized_rosen.mod;
+data generalized_rosen.dat;
+display x; # print the initial values of variables
+solve;
+display x; # print the values of solutions after solving

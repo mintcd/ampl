@@ -1,0 +1,4 @@
+# Rosenbrock’s Banana Function: Data file
+param a := 100;
+let x := -1.2;
+let y := 1.0;
