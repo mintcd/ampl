@@ -1,0 +1,8 @@
+MINOS 5.51: optimal solution found.
+34 iterations, objective -0.5157294716
+Nonlin evals: obj = 83, grad = 82, constrs = 83, Jac = 82.
+eigenvalue =  -0.515729
+eigenvector 
+ x[ 1] =   0.736976
+ x[ 2] =   0.327985
+ x[ 3] =  -0.591009

@@ -1,0 +1,7 @@
+model eigenvalue.mod;
+data eigenvalue.dat;
+option solver minos;
+solve;
+printf "eigenvalue = %10.6f\n", quadratic;
+printf "eigenvector \n";
+printf {k in 1..n} " x[%2.0f] = %10.6f\n", k, x[k];
