@@ -1,0 +1,35 @@
+model exercise4.mod;
+data exercise4.dat;
+
+option solver snopt;
+
+param theta;
+param phi;
+param OutputFile symbolic;
+
+param pi := 4 * atan(1);
+
+for {val in {100}}{
+  reset data N, OutputFile;
+
+  let N := val;
+  let OutputFile := sprintf("coords-%d.txt", N);
+
+  for {i in 1..N} {
+    let theta := Uniform01() * 2 * pi;
+    let phi := acos(2 * Uniform01() - 1);
+    let x[i] := cos(theta) * sin(phi);
+    let y[i] := sin(theta) * sin(phi);
+    let z[i] := cos(phi);
+  }
+
+  solve;
+
+  printf "Solution in case N=%d \n", N;
+  printf "Objective value: %.6f\n", energy;
+  printf "Coordinates:\n";
+
+  for {i in 1..N} {
+    printf "(%.6f,%.6f,%.6f)\n", x[i], y[i], z[i] > (OutputFile);
+  }
+}

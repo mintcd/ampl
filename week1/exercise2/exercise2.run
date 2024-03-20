@@ -1,0 +1,15 @@
+model exercise2.mod;
+option solver ;
+
+for {k in 1..10} {
+    let n := k; 
+    
+    for {i in 1..n}{
+      for {j in 1..n}{
+          let A[i,j] := 1 / (i + j - 1);
+      }
+  }
+
+    solve; 
+    printf "%7.4f \n", eigenval > eigenvals.txt;
+}

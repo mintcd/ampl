@@ -1,0 +1,12 @@
+model D:\AMPL\week1\exercise5\exercise5.mod;
+data D:\AMPL\week1\exercise5\exercise5.dat;
+
+option solver ipopt;
+
+param OutputFile symbolic := sprintf("coords-%d.txt", N);
+solve;
+
+
+for {i in 1..N} {
+  printf "(%.6f, %.6f)\n", r[i], theta[i] > (OutputFile)
+}

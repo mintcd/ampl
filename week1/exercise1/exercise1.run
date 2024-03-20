@@ -1,0 +1,8 @@
+model exercise1.mod;
+data exercise1.dat;
+option solver snopt;
+
+param OutputFile symbolic := sprintf("solution-%d.out", n);
+solve;
+
+display x;

@@ -1,0 +1,23 @@
+model exercise3.mod;
+data exercise3.dat;
+
+option solver snopt;
+
+for {i in {1..n-1}}{
+    drop ortho[i];
+}
+
+for {iter in {1..n}} {
+
+    if iter > 1 then {
+        for {j in 1..n} {
+            let u[iter-1, j] := x[j]
+        }
+        restore ortho[iter-1]
+    }
+        
+    solve;
+
+    printf "Eigenvalue %d: %.6f\n", iter, quadratic > eigenvalues.out     
+}
+

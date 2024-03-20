@@ -1,0 +1,18 @@
+param a;
+var x;
+minimize Rosen: (x-a)^2;
+
+option solver snopt;
+
+# Loop through different values of 'a'
+for {val in {100,200,300}} {
+    let a := val;
+    
+    # Solve the optimization problem
+    solve;
+
+    # Display the solution
+    printf "\nSolution for a = %d:\n", a;
+    printf "Objective value: %.6f\n", Rosen;
+    printf "x: %.6f\n", x;
+}

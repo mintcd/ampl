@@ -1,0 +1,9 @@
+SNOPT 7.5-1.2 : Optimal solution found.
+82 iterations, objective -0.5157294716
+Nonlin evals: obj = 146, grad = 145, constrs = 146, Jac = 145.
+SNOPT 7.5-1.2 : Optimal solution found.
+10 iterations, objective 0.1709151888
+Nonlin evals: obj = 10, grad = 9, constrs = 10, Jac = 9.
+SNOPT 7.5-1.2 : Optimal solution found.
+2 iterations, objective 11.34481534
+Nonlin evals: obj = 6, grad = 5, constrs = 6, Jac = 5.

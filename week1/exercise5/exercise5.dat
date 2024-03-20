@@ -1,0 +1,6 @@
+param N := 100;
+
+for {i in 1..N-1} {
+  let r[i] := 4*i*(N+1-i)/(N+1)^2;
+  let theta[i] := i*pi/N;
+}
