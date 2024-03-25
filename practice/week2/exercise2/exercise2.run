@@ -1,0 +1,10 @@
+option solver knitro;
+
+var x{1..2} := 0;
+
+minimize f:
+  (x[1]*(1-x[2]^3)-2.625)^2 + (2.25-x[1]*(1-x[2]^2)^2)^2 + (1.5-x[1]*(1-x[2]))^2
+;
+
+solve;
+display x;

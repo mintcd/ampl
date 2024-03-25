@@ -1,0 +1,73 @@
+\subsection*{Exercise 1.}
+\begin{enumerate}
+  \item The AMPL solution for Rosenbrock is found in ``exercise1/solution.out".
+  \item Let $a=100$, we have
+        \begin{align*}
+          \dfrac{\delta g}{\delta x_1}
+           & = \dfrac{\mathrm{d}}{\mathrm{d} x_1}\left[(1-x_1)^2+a(x_{2}-x_{1}^2)^2\right] \\
+           & = - 2(1-x_1) -2ax_1(x_{2}-x_{1}^2);
+        \end{align*}
+        \begin{align*}
+          \dfrac{\delta g}{\delta x_k}
+           & = \dfrac{\mathrm{d}}{\mathrm{d} x_k}\left[a(x_{k}-x_{k-1}^2)^2 + (1-x_k)^2+a(x_{k+1}-x_{k}^2)^2\right] \\
+           & = 2a(x_{k}-x_{k-1}^2) - 2(1-x_k) -2ax_k(x_{k+1}-x_{k}^2), \text{ for } 2 \le k \le n-1;
+        \end{align*}
+        \begin{align*}
+          \dfrac{\delta g}{\delta x_n}
+           & = \dfrac{\mathrm{d}}{\mathrm{d} x_n}\left[a(x_{n}-x_{n-1}^2)^2\right] \\
+           & = 2a(x_{n}-x_{n-1}^2);
+        \end{align*}
+
+        The MATLAB script is found in ``exercise1/stationary.m".
+\end{enumerate}
+
+\subsection*{Exercise 2.}
+
+f(x) =
+
+\subsubsection*{1.} The solution is found in ``exercise2/solution.out''.
+\subsubsection*{2.} We have
+\begin{align*}
+  \dfrac{\delta f}{\delta x_1}
+   & = 2(1-x_2^3)(x_1(1-x_2^3) - 2.625) - 2(1-x_2^2)(2.25-x_1(1-x_2)^2) - 2(1-x_2)(1.5-x_1(1-x_2)), \\
+  \dfrac{\delta f}{\delta x_2}
+   & = -6x_1x_2^2(x_1(1-x_2^3) - 2.625) + 4x_1x_2(2.25-x_1(1-x_2)^2) + 2x_1x_2(1.5-x_1(1-x_2)).
+\end{align*}
+
+\subsection*{Exercise 3.}
+
+\subsubsection*{1.} 
+
+\subsubsection*{2.}
+
+\begin{enumerate}
+  \item[a.] We have $\lim\limits_{t\to\infty} f_x(t) = x_2$, so we can approximate $x_2 \approx \argmax f_x(t) = 300$.
+  \item[b.] Using $x_2 = 300$ and the average of $f_x(0)$ given by the data, we have $f_x(0) = \dfrac{300}{1+300x_3} = 19.5$. Therefore, $x_3 \approx 0.04795$.
+  \item[c.]
+        Using the data, we approximate $f_x(t)$ as followings
+
+        \begin{center}
+          \begin{tabular}{|c|c|c|c|}
+            \hline
+            $t$ & $f_x$ & $t$ & $f_x$ \\
+            \hline
+            0   & 19.5  & 21  &       \\
+            1   & 20    &     &       \\
+            2   & 23.5  &     &       \\
+          \end{tabular}
+        \end{center}
+
+
+        We have
+        $$f_x'(t) = \dfrac{-x_2(-x_1x_2x_3e^{-x_1t})}{(1+x_2x_3e^{-x_1t})^2} = x_1x_3f_x(t)^2e^{-x_1t}.$$
+        Hence
+        \begin{align*}
+          f''_x(t)
+           & = x_1x_3\left[2f_x(t)f'_x(t)e^{-x_1t}-x_1e^{-x_1t}f_x(t)^2\right]   \\
+           & = x_1x_3\left[2x_1x_3f_x(t)^3e^{-2x_1t}-x_1f_x(t)^2e^{-x_1t}\right] \\
+           & = x_1^2x_3f_x(t)^2e^{-x_1t}\left[2x_3f_x(t)e^{-x_1t}-1\right].
+        \end{align*}
+        Therefore, to determine whether $f''_x(t)=0$, we only have to determine whether $2x_3f_x(t)e^{-x_1t}=1$, that is
+        $$\dfrac{2x_2x_3 e^{-x_1t}}{1+x_2x_3e^{-x_1t}} = \dfrac{2x_2x_3}{e^{x_1t}+x_2x_3} = 1.$$
+        Thus, we can approximate $x_1=$
+\end{enumerate}
