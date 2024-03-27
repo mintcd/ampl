@@ -1,0 +1,11 @@
+option solver snopt;
+model exercise3.mod;
+data wing.dat;
+
+let x[2] := 300;
+let x[3] := 187/3900;
+let x[1] := 0;
+
+solve;
+
+display x;

@@ -1,10 +1,9 @@
 option solver knitro;
-
 var x{1..2} := 0;
-
 minimize f:
-  (x[1]*(1-x[2]^3)-2.625)^2 + (2.25-x[1]*(1-x[2]^2)^2)^2 + (1.5-x[1]*(1-x[2]))^2
-;
-
+    (x[1]*(1-x[2]^3) - 2.625)^2
+  + (x[1]*(1-x[2]^2) - 2.25)^2
+  + (x[1]*(1-x[2]) - 1.5)^2;
 solve;
-display x;
+printf "Optimal value printed by user:\n" > D:/Projects/optimization-practice/practice/week2/exercise2/optimal-point.txt;
+printf "(%.6f, %.6f)", x[1], x[2] > D:/Projects/optimization-practice/practice/week2/exercise2/optimal-point.txt;

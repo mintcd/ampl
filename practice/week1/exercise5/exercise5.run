@@ -1,5 +1,5 @@
-model D:\AMPL\week1\exercise5\exercise5.mod;
-data D:\AMPL\week1\exercise5\exercise5.dat;
+model exercise5.mod;
+data exercise5.dat;
 
 option solver ipopt;
 

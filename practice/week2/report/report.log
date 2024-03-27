@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.13)  25 MAR 2024 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.13)  27 MAR 2024 03:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -429,15 +429,15 @@ L3 programming layer <2023-12-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9832 strings out of 474175
- 162362 string characters out of 5749697
- 1942460 words of memory out of 5000000
- 31969 multiletter control sequences out of 15000+600000
+ 9831 strings out of 474175
+ 162322 string characters out of 5749697
+ 1940460 words of memory out of 5000000
+ 31968 multiletter control sequences out of 15000+600000
  563820 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,10n,79p,1251b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on report.pdf (2 pages, 113140 bytes).
+Output written on report.pdf (2 pages, 114445 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream

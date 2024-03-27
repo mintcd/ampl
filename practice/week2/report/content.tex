@@ -18,12 +18,10 @@
            & = 2a(x_{n}-x_{n-1}^2);
         \end{align*}
 
-        The MATLAB script is found in ``exercise1/stationary.m".
+        The MATLAB script is found in ``exercise1/exercise1.m".
 \end{enumerate}
 
 \subsection*{Exercise 2.}
-
-f(x) =
 
 \subsubsection*{1.} The solution is found in ``exercise2/solution.out''.
 \subsubsection*{2.} We have
@@ -36,7 +34,7 @@ f(x) =
 
 \subsection*{Exercise 3.}
 
-\subsubsection*{1.} 
+\subsubsection*{1.} The script is found in ``exercise2/exercise2.m''. The matrix of $(1,t_i,\cdots,t_i^p)$ becomes to singular when $p$ is 4 or 5, leading to imprecise results. Meanwhile, using the weights returned by the backslash operator, we can calculate that the residual does not reduce when $p$ get larger. We conclude that the polynomial model is not a good one.
 
 \subsubsection*{2.}
 
@@ -44,20 +42,6 @@ f(x) =
   \item[a.] We have $\lim\limits_{t\to\infty} f_x(t) = x_2$, so we can approximate $x_2 \approx \argmax f_x(t) = 300$.
   \item[b.] Using $x_2 = 300$ and the average of $f_x(0)$ given by the data, we have $f_x(0) = \dfrac{300}{1+300x_3} = 19.5$. Therefore, $x_3 \approx 0.04795$.
   \item[c.]
-        Using the data, we approximate $f_x(t)$ as followings
-
-        \begin{center}
-          \begin{tabular}{|c|c|c|c|}
-            \hline
-            $t$ & $f_x$ & $t$ & $f_x$ \\
-            \hline
-            0   & 19.5  & 21  &       \\
-            1   & 20    &     &       \\
-            2   & 23.5  &     &       \\
-          \end{tabular}
-        \end{center}
-
-
         We have
         $$f_x'(t) = \dfrac{-x_2(-x_1x_2x_3e^{-x_1t})}{(1+x_2x_3e^{-x_1t})^2} = x_1x_3f_x(t)^2e^{-x_1t}.$$
         Hence
@@ -69,5 +53,7 @@ f(x) =
         \end{align*}
         Therefore, to determine whether $f''_x(t)=0$, we only have to determine whether $2x_3f_x(t)e^{-x_1t}=1$, that is
         $$\dfrac{2x_2x_3 e^{-x_1t}}{1+x_2x_3e^{-x_1t}} = \dfrac{2x_2x_3}{e^{x_1t}+x_2x_3} = 1.$$
-        Thus, we can approximate $x_1=$
+        The estimation of $f_x''$ in the MATLAB script is not a good one, we can approximate $x_1=\dfrac{\ln(x_2x_3)}{20} \approx 0.1333$.
 \end{enumerate}
+
+The plot appears after running  ``exercise2/plot\_user.m''

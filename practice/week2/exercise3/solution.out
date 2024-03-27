@@ -1,0 +1,9 @@
+SNOPT 7.5-1.2 : Optimal solution found.
+94 iterations, objective 5318.763122
+Nonlin evals: obj = 60, grad = 59.
+x [*] :=
+1    0.124447
+2  318.483
+3    0.051731
+;
+
